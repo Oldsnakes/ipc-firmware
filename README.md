@@ -36,6 +36,10 @@ Many cameras provision themselves when they are first powered on, adding initial
 
 I recommend to use a modded [CH341A Programmer](https://github.com/themactep/thingino-firmware/wiki/CH341A-Programmer) and [scriba](https://github.com/themactep/scriba) for dumping the flash. That is the most reliable way to get a correct dump.
 
+> [!WARNING]
+> If the camera has been even powered on, factory-reset it before dumping its flash!
+> Otherwise, your network credentials stored in the flash will be shared!
+
 Open the camera, locate the flash chip and dump it using the flash programmer. Make two readings back to back, then compare their hashes. If they are the same, you have a good dump. If not, repeat the process until you get a good dump. Scriba has a built-in hash comparison feature, which makes the whole process easier.
 
 ## Support
