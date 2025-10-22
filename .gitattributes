@@ -1,0 +1,1 @@
+aquara_g100-t31x-sc3336p-aic8800dc-nand-virgin.bin filter=lfs diff=lfs merge=lfs -text
