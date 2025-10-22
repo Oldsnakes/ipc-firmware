@@ -32,6 +32,56 @@ Dash-separated names of the following format:
 
 Many cameras provision themselves when they are first powered on, adding initial configuration to the flash. Therefore, it is important to know whether the dump was taken from a virgin camera or not.
 
+## How to download files using Git LFS
+
+This repository uses [Git LFS](https://git-lfs.com/) to store large binary firmware files efficiently. To download the firmware dumps, you need to have Git LFS installed.
+
+### Installation
+
+**macOS (using Homebrew):**
+```bash
+brew install git-lfs
+```
+
+**Ubuntu/Debian:**
+```bash
+sudo apt-get install git-lfs
+```
+
+**Windows (using Chocolatey):**
+```bash
+choco install git-lfs
+```
+
+**Other systems:** Visit [git-lfs.com](https://git-lfs.com/) for installation instructions.
+
+### Setup
+
+After installing Git LFS, initialize it in your Git configuration (one-time setup):
+```bash
+git lfs install
+```
+
+### Cloning the repository
+
+Clone the repository normally. Git LFS will automatically download the large files:
+```bash
+git clone https://github.com/themactep/ipc-firmware.git
+cd ipc-firmware
+```
+
+### Pulling updates
+
+When pulling updates that include new firmware files, Git LFS will automatically fetch them:
+```bash
+git pull
+```
+
+If you already have the repository cloned but need to download LFS files, run:
+```bash
+git lfs pull
+```
+
 ## How to dump a flash
 
 I recommend to use a modded [CH341A Programmer](https://github.com/themactep/thingino-firmware/wiki/CH341A-Programmer) and [scriba](https://github.com/themactep/scriba) for dumping the flash. That is the most reliable way to get a correct dump.
